@@ -1,8 +1,7 @@
 {
     "name": "strayobject/mizzenlite",
     "type": "cms",
-    "description" : "MizzenLite provides a quick way to create simple websites
-        utilising existing composer packages.",
+    "description" : "MizzenLite provides a quick way to create simple websites utilising existing composer packages.",
     "keywords": ["cms", "website"],
     "license": "MIT",
     "homepage" : "http://mizzencms.net",
