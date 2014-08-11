@@ -7,10 +7,8 @@ use Plainmotif\Mizzenlite\Page\PageRepository;
 use Plainmotif\Mizzenlite\Page\Page;
 use Symfony\Component\Finder\Finder;
 /**
- * @todo add an event and remove metaparser
  * @todo  change name to generator
  */
-use mizzenlite\module\metaParser\MetaParser;
 
 class PageRepositoryProvider extends Base
 {
@@ -26,7 +24,8 @@ class PageRepositoryProvider extends Base
     }
     /**
      * @todo remove coupling, redo 404
-     * @todo  limit finder to extension set in config
+     * @todo limit finder to extension set in config
+     * @todo package should not rely on module
      * @return [type] [description]
      */
     public function populateRepository()
@@ -34,7 +33,7 @@ class PageRepositoryProvider extends Base
         $location   = $this->getBag()->get('config')->pages->location;
         $extension  = $this->getBag()->get('config')->pages->extension;
         $finder     = $this->getFinder()->in($location);
-        $metaParser = new MetaParser();
+        $metaParser = $this->getBag()->get('metaParser');
 
         foreach ($finder as $f) {
             $content = $f->getContents();
@@ -58,7 +57,7 @@ class PageRepositoryProvider extends Base
             $metaParser->parse(file_get_contents($notFound->getLocation()))
         );
         $notFound->setContent($metaParser->removeMetaString());
-        
+
         $this->getPageRepository()->add($notFound);
 
         return $this;

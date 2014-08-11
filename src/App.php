@@ -11,7 +11,6 @@ use Plainmotif\Mizzenlite\Helpers\ArrayHelper;
 use Plainmotif\Mizzenlite\Page\PageRepositoryProvider;
 use Plainmotif\Mizzenlite\Page\PageRepository;
 use Symfony\Component\Finder\Finder;
-use CommonApi\Exception\ErrorThrownAsException;
 use League\Url\Url;
 
 class App extends Base
