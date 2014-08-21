@@ -12,7 +12,7 @@ abstract class Base
     {
         $this->setBag(Container::getInstance());
 
-        if ($this->getBag()->has('eventManger')
+        if ($this->getBag()->has('eventManager')
             && get_class($this) != 'Plainmotif\Mizzenlite\EventManager')
         {
             $this->triggerEvent(

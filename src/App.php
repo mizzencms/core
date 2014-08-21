@@ -108,12 +108,12 @@ class App extends Base
     {
         $em = $this->getBag()->getShared('eventManager');
 
-        if (is_dir($this->getBag()->get('basePath')->path.'/module/observers')) {
-            $dir = opendir($this->getBag()->get('basePath')->path.'/module/observers');
+        if (is_dir($this->getBag()->get('basePath')->path.'/module/Observers')) {
+            $dir = opendir($this->getBag()->get('basePath')->path.'/module/Observers');
 
             while ($file = readdir($dir)) {
                 if (!in_array($file, array('.', '..'))) {
-                    $class  = 'mizzenlite\module\observers\\'.str_replace('.php', '', $file);
+                    $class  = 'mizzenlite\module\Observers\\'.str_replace('.php', '', $file);
                     $object = new $class();
                     $em->attach($object);
                 }
