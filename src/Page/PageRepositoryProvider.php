@@ -6,6 +6,7 @@ use Strayobject\Mizzenlite\Base;
 use Strayobject\Mizzenlite\Page\PageRepository;
 use Strayobject\Mizzenlite\Page\Page;
 use Symfony\Component\Finder\Finder;
+use CommonApi\Exception\InvalidArgumentException;
 /**
  * @todo  change name to generator
  */
@@ -30,7 +31,12 @@ class PageRepositoryProvider extends Base
      */
     public function populateRepository()
     {
-        $location   = $this->getBag()->get('config')->pages->location;
+        $location = $this->getBag()->get('config')->pages->location;
+
+        if (!file_exists($location)) {
+            throw new InvalidArgumentException('Page location does not exist');
+        }
+
         $extension  = $this->getBag()->get('config')->pages->extension;
         $finder     = $this->getFinder()->in($location);
         $metaParser = $this->getBag()->get('metaParser');
