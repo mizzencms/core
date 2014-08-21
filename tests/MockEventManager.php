@@ -7,7 +7,7 @@ use Strayobject\Mizzenlite\EventManager;
 class MockEventManager extends EventManager
 {
     /**
-     * For testing wee need to return Observer::run() value
+     * For testing we need to return Observer::run() value
      */
     public function notify($event, $params)
     {
