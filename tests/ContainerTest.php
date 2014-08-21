@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Test;
+namespace Strayobject\Mizzenlite\Test;
 
-use Plainmotif\Mizzenlite\Container;
+use Strayobject\Mizzenlite\Container;
 
 /**
  * @todo test exceptions are raised

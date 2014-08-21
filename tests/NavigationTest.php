@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Test;
+namespace Strayobject\Mizzenlite\Test;
 
 class NavigationTest extends \PHPUnit_Framework_TestCase
 {

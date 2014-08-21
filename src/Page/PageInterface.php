@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Page;
+namespace Strayobject\Mizzenlite\Page;
 
 interface PageInterface
 {

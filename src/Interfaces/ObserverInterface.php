@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Interfaces;
+namespace Strayobject\Mizzenlite\Interfaces;
 
 interface ObserverInterface
 {

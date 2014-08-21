@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Test;
+namespace Strayobject\Mizzenlite\Test;
 
-use Plainmotif\Mizzenlite\Observer;
+use Strayobject\Mizzenlite\Observer;
 
 class MockObserver extends Observer
 {

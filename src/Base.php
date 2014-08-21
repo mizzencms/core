@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite;
+namespace Strayobject\Mizzenlite;
 
-use Plainmotif\Mizzenlite\Helpers\StringHelper;
+use Strayobject\Mizzenlite\Helpers\StringHelper;
 
 abstract class Base
 {
@@ -13,7 +13,7 @@ abstract class Base
         $this->setBag(Container::getInstance());
 
         if ($this->getBag()->has('eventManager')
-            && get_class($this) != 'Plainmotif\Mizzenlite\EventManager')
+            && get_class($this) != 'Strayobject\Mizzenlite\EventManager')
         {
             $this->triggerEvent(
                 'construct'.ucfirst(StringHelper::toCamelCase(get_class($this), '\\')),

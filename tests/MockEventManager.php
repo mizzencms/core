@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Test;
+namespace Strayobject\Mizzenlite\Test;
 
-use Plainmotif\Mizzenlite\EventManager;
+use Strayobject\Mizzenlite\EventManager;
 
 class MockEventManager extends EventManager
 {

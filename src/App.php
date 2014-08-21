@@ -1,15 +1,15 @@
 <?php
 
-namespace Plainmotif\Mizzenlite;
+namespace Strayobject\Mizzenlite;
 
-use Plainmotif\Mizzenlite\Container;
-use Plainmotif\Mizzenlite\Request;
-use Plainmotif\Mizzenlite\View\View;
-use Plainmotif\Mizzenlite\EventManager;
-use Plainmotif\Mizzenlite\Navigation\Navigation;
-use Plainmotif\Mizzenlite\Helpers\ArrayHelper;
-use Plainmotif\Mizzenlite\Page\PageRepositoryProvider;
-use Plainmotif\Mizzenlite\Page\PageRepository;
+use Strayobject\Mizzenlite\Container;
+use Strayobject\Mizzenlite\Request;
+use Strayobject\Mizzenlite\View\View;
+use Strayobject\Mizzenlite\EventManager;
+use Strayobject\Mizzenlite\Navigation\Navigation;
+use Strayobject\Mizzenlite\Helpers\ArrayHelper;
+use Strayobject\Mizzenlite\Page\PageRepositoryProvider;
+use Strayobject\Mizzenlite\Page\PageRepository;
 use Symfony\Component\Finder\Finder;
 use League\Url\Url;
 

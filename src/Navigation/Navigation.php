@@ -1,10 +1,10 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Navigation;
+namespace Strayobject\Mizzenlite\Navigation;
 
-use Plainmotif\Mizzenlite\Base;
+use Strayobject\Mizzenlite\Base;
 use Knp\Menu\MenuFactory;
-use Plainmotif\Mizzenlite\Page\PageInterface;
+use Strayobject\Mizzenlite\Page\PageInterface;
 use Knp\Menu\ItemInterface;
 use Knp\Menu\Renderer\ListRenderer;
 use Knp\Menu\Matcher\Matcher;

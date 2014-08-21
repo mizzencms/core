@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\view;
+namespace Strayobject\Mizzenlite\view;
 
-use Plainmotif\Mizzenlite\Base;
+use Strayobject\Mizzenlite\Base;
 
 class View extends Base
 {

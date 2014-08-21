@@ -1,9 +1,9 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Test;
+namespace Strayobject\Mizzenlite\Test;
 
-use Plainmotif\Mizzenlite\EventManager;
-use Plainmotif\Mizzenlite\Test\MockEventManager;
+use Strayobject\Mizzenlite\EventManager;
+use Strayobject\Mizzenlite\Test\MockEventManager;
 
 class EventManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,7 +16,7 @@ class EventManagerTest extends \PHPUnit_Framework_TestCase
     public function testAttach()
     {
         $em       = new EventManager();
-        $observer = $this->getMockForAbstractClass('Plainmotif\Mizzenlite\Observer');
+        $observer = $this->getMockForAbstractClass('Strayobject\Mizzenlite\Observer');
 
         $observer->setEvents(['event']);
         $em->attach($observer);
@@ -26,7 +26,7 @@ class EventManagerTest extends \PHPUnit_Framework_TestCase
     public function testNotify()
     {
         $em       = new EventManager();
-        $observer = $this->getMockForAbstractClass('Plainmotif\Mizzenlite\Observer');
+        $observer = $this->getMockForAbstractClass('Strayobject\Mizzenlite\Observer');
 
         $observer->setEvents(['event']);
         $em->attach($observer);
@@ -54,7 +54,7 @@ class EventManagerTest extends \PHPUnit_Framework_TestCase
     public function testDetach()
     {
         $em       = new EventManager();
-        $observer = $this->getMockForAbstractClass('Plainmotif\Mizzenlite\Observer');
+        $observer = $this->getMockForAbstractClass('Strayobject\Mizzenlite\Observer');
 
         $observer->setEvents(['event']);
         $em->attach($observer);

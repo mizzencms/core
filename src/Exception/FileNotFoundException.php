@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Exception;
+namespace Strayobject\Mizzenlite\Exception;
 
 use CommonApi\Exception\RuntimeException;
 

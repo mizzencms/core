@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite;
+namespace Strayobject\Mizzenlite;
 
-use Plainmotif\Mizzenlite\Interfaces\ObserverInterface;
+use Strayobject\Mizzenlite\Interfaces\ObserverInterface;
 
 class EventManager extends Base
 {

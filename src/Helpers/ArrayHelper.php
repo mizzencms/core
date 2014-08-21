@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Helpers;
+namespace Strayobject\Mizzenlite\Helpers;
 
 class ArrayHelper
 {
@@ -12,7 +12,7 @@ class ArrayHelper
         if (is_array($config)) {
             return (object) array_map(
                 array(
-                    'Plainmotif\Mizzenlite\helpers\ArrayHelper',
+                    'Strayobject\Mizzenlite\helpers\ArrayHelper',
                     'configArrayToObject'
                 ),
                 $config

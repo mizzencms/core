@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite;
+namespace Strayobject\Mizzenlite;
 
 class Container
 {

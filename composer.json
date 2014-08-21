@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Plainmotif\\Mizzenlite\\": "src"
+            "Strayobject\\Mizzenlite\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Plainmotif\\Mizzenlite\\Test\\": "tests"
+            "Strayobject\\Mizzenlite\\Test\\": "tests"
         }
     },
     "replace": {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Page;
+namespace Strayobject\Mizzenlite\Page;
 
-use Plainmotif\Mizzenlite\Base;
-use Plainmotif\Mizzenlite\Page\PageRepository;
-use Plainmotif\Mizzenlite\Page\Page;
+use Strayobject\Mizzenlite\Base;
+use Strayobject\Mizzenlite\Page\PageRepository;
+use Strayobject\Mizzenlite\Page\Page;
 use Symfony\Component\Finder\Finder;
 /**
  * @todo  change name to generator

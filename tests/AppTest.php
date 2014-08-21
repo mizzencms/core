@@ -1,6 +1,6 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Test;
+namespace Strayobject\Mizzenlite\Test;
 
 class AppTest extends \PHPUnit_Framework_TestCase
 {

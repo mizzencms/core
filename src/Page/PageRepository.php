@@ -1,9 +1,9 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Page;
+namespace Strayobject\Mizzenlite\Page;
 
-use Plainmotif\Mizzenlite\Page\PageInterface;
-use Plainmotif\Mizzenlite\Base;
+use Strayobject\Mizzenlite\Page\PageInterface;
+use Strayobject\Mizzenlite\Base;
 
 class PageRepository extends Base
 {

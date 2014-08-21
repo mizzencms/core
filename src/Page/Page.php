@@ -1,8 +1,8 @@
 <?php
 
-namespace Plainmotif\Mizzenlite\Page;
+namespace Strayobject\Mizzenlite\Page;
 
-use Plainmotif\Mizzenlite\Page\PageInterface;
+use Strayobject\Mizzenlite\Page\PageInterface;
 
 class Page implements PageInterface
 {
