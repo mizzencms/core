@@ -7,11 +7,8 @@ use Strayobject\Mizzenlite\Page\PageRepository;
 use Strayobject\Mizzenlite\Page\Page;
 use Symfony\Component\Finder\Finder;
 use CommonApi\Exception\InvalidArgumentException;
-/**
- * @todo  change name to generator
- */
 
-class PageRepositoryProvider extends Base
+class PageRepositoryGenerator extends Base
 {
     private $pageRepository;
     private $finder;
