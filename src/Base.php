@@ -24,7 +24,6 @@ abstract class Base
 
     public function triggerEvent($eventName, $eventParams)
     {
-        //d($eventName);
         if ($bag = $this->getBag()) {
             $bag->getShared('eventManager')->notify($eventName, $eventParams);
         }

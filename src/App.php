@@ -8,8 +8,9 @@ use Strayobject\Mizzenlite\View\View;
 use Strayobject\Mizzenlite\EventManager;
 use Strayobject\Mizzenlite\Navigation\Navigation;
 use Strayobject\Mizzenlite\Helpers\ArrayHelper;
-use Strayobject\Mizzenlite\Page\PageRepositoryProvider;
+use Strayobject\Mizzenlite\Page\PageRepositoryGenerator;
 use Strayobject\Mizzenlite\Page\PageRepository;
+use Strayobject\Mizzenlite\MetaParser\MetaParser;
 use Symfony\Component\Finder\Finder;
 use League\Url\Url;
 
@@ -63,8 +64,11 @@ class App extends Base
 
             return $url;
         });
+        $bag->add('metaParser', function () {
+            return new MetaParser();
+        });
         $bag->add('pageRepository', function () {
-            $prp = new PageRepositoryProvider(new PageRepository(), new Finder());
+            $prp = new PageRepositoryGenerator(new PageRepository(), new Finder());
             $prp->populateRepository();
 
             return $prp->getPageRepository();
@@ -72,11 +76,9 @@ class App extends Base
         $bag->add('navigation', function () {
             return (new Navigation())->createPageMenu();
         });
-
         $bag->add('eventManager', function () {
             return new EventManager();
         });
-
         $bag->add('view', function () {
             return new View();
         });
@@ -103,22 +105,36 @@ class App extends Base
 
         return $view->render();
     }
-
+    /**
+     * @todo redo
+     */
     public function registerObservers()
     {
-        $em = $this->getBag()->getShared('eventManager');
+        $em         = $this->getBag()->getShared('eventManager');
+        $pathModule = $this->getBag()->get('basePath')->path.'/module/';
 
-        if (is_dir($this->getBag()->get('basePath')->path.'/module/Observers')) {
-            $dir = opendir($this->getBag()->get('basePath')->path.'/module/Observers');
+        if (is_dir($pathModule)) {
+            $dir = opendir($pathModule);
 
-            while ($file = readdir($dir)) {
-                if (!in_array($file, array('.', '..'))) {
-                    $class  = 'mizzenlite\module\Observers\\'.str_replace('.php', '', $file);
-                    $object = new $class();
-                    $em->attach($object);
+            while ($vendor = readdir($dir)) {
+                if (!in_array($vendor, array('.', '..'))) {
+                    $pathVendor = $pathModule.$vendor.'/';
+                    $vendorDir  = opendir($pathVendor);
+
+                    while ($module = readdir($vendorDir)) {
+                        if (!in_array($module, array('.', '..'))) {
+                            $pathObserver = $pathVendor.$module.'/Module.php';
+
+                            if (file_exists($pathObserver)) {
+                                $class  = 'Module\\'.$vendor.'\\'.$module.'\\Module';
+                                $object = new $class();
+                                $em->attach($object);
+                            }
+                        }
+                    }
+                    closedir($vendorDir);
                 }
             }
-
             closedir($dir);
         }
     }
