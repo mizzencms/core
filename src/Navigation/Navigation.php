@@ -101,7 +101,7 @@ class Navigation extends Base
         $menu->addChild($path);
 
         if (!$page->isDir()) {
-            $menu[$path]->setUri($page->getPath());
+            $menu[$path]->setUri('/'.$page->getPath());
         }
 
         $this->setMenuAttributes('child', $menu[$path]);
@@ -115,7 +115,12 @@ class Navigation extends Base
             'path'       => &$path,
         ));
     }
-
+    /**
+     * Responsible for adding attributes to menu item groups
+     *
+     * @param string        $type see switch for details
+     * @param ItemInterface $menu
+     */
     public function setMenuAttributes($type, ItemInterface $menu)
     {
         if (isset($this->getBag()->get('config')->nav->attributes->{$type})) {
