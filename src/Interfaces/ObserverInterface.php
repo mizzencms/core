@@ -1,6 +1,6 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Interfaces;
+namespace Mizzencms\Core\Interfaces;
 
 interface ObserverInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Page;
+namespace Mizzencms\Core\Page;
 
 interface PageInterface
 {

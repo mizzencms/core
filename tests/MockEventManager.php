@@ -1,8 +1,8 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Test;
+namespace Mizzencms\Core\Test;
 
-use Strayobject\Mizzenlite\EventManager;
+use Mizzencms\Core\EventManager;
 
 class MockEventManager extends EventManager
 {

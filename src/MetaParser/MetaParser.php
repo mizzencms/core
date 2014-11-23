@@ -1,9 +1,9 @@
 <?php
 
-namespace Strayobject\Mizzenlite\MetaParser;
+namespace Mizzencms\Core\MetaParser;
 
-use Strayobject\Mizzenlite\Base;
-use Strayobject\Mizzenlite\Container;
+use Mizzencms\Core\Base;
+use Mizzencms\Core\Container;
 
 class MetaParser extends Base
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Page;
+namespace Mizzencms\Core\Page;
 
-use Strayobject\Mizzenlite\Page\PageInterface;
+use Mizzencms\Core\Page\PageInterface;
 
 class Page implements PageInterface
 {
@@ -25,11 +25,11 @@ class Page implements PageInterface
     {
         return $this->meta;
     }
-    
+
     /**
      * Sets the value of meta.
      *
-     * @param mixed $meta the meta 
+     * @param mixed $meta the meta
      *
      * @return self
      */
@@ -49,11 +49,11 @@ class Page implements PageInterface
     {
         return $this->content;
     }
-    
+
     /**
      * Sets the value of content.
      *
-     * @param mixed $content the content 
+     * @param mixed $content the content
      *
      * @return self
      */
@@ -73,11 +73,11 @@ class Page implements PageInterface
     {
         return $this->path;
     }
-    
+
     /**
      * Sets the value of path.
      *
-     * @param mixed $path the path 
+     * @param mixed $path the path
      *
      * @return self
      */
@@ -97,11 +97,11 @@ class Page implements PageInterface
     {
         return $this->location;
     }
-    
+
     /**
      * Sets the value of location.
      *
-     * @param mixed $location the location 
+     * @param mixed $location the location
      *
      * @return self
      */
@@ -121,11 +121,11 @@ class Page implements PageInterface
     {
         return $this->isDir;
     }
-    
+
     /**
      * Sets the value of isDir.
      *
-     * @param mixed $isDir the is dir 
+     * @param mixed $isDir the is dir
      *
      * @return self
      */

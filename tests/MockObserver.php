@@ -1,8 +1,8 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Test;
+namespace Mizzencms\Core\Test;
 
-use Strayobject\Mizzenlite\Observer;
+use Mizzencms\Core\Observer;
 
 class MockObserver extends Observer
 {

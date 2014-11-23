@@ -1,6 +1,6 @@
 <?php
 
-namespace Strayobject\Mizzenlite;
+namespace Mizzencms\Core;
 
 class Container
 {

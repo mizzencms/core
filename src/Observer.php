@@ -6,9 +6,9 @@
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
  * @link http://mizzencms.net
  */
-namespace Strayobject\Mizzenlite;
+namespace Mizzencms\Core;
 
-use Strayobject\Mizzenlite\Interfaces\ObserverInterface;
+use Mizzencms\Core\Interfaces\ObserverInterface;
 
 abstract class Observer extends Base implements ObserverInterface
 {

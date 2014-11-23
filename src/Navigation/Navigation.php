@@ -1,10 +1,10 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Navigation;
+namespace Mizzencms\Core\Navigation;
 
-use Strayobject\Mizzenlite\Base;
+use Mizzencms\Core\Base;
 use Knp\Menu\MenuFactory;
-use Strayobject\Mizzenlite\Page\PageInterface;
+use Mizzencms\Core\Page\PageInterface;
 use Knp\Menu\ItemInterface;
 use Knp\Menu\Renderer\ListRenderer;
 use Knp\Menu\Matcher\Matcher;

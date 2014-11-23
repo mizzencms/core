@@ -1,8 +1,8 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Test;
+namespace Mizzencms\Core\Test;
 
-use Strayobject\Mizzenlite\Container;
+use Mizzencms\Core\Container;
 
 /**
  * @todo test exceptions are raised

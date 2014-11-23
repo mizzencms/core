@@ -1,16 +1,16 @@
 <?php
 
-namespace Strayobject\Mizzenlite;
+namespace Mizzencms\Core;
 
-use Strayobject\Mizzenlite\Container;
-use Strayobject\Mizzenlite\Request;
-use Strayobject\Mizzenlite\View\View;
-use Strayobject\Mizzenlite\EventManager;
-use Strayobject\Mizzenlite\Navigation\Navigation;
-use Strayobject\Mizzenlite\Helpers\ArrayHelper;
-use Strayobject\Mizzenlite\Page\PageRepositoryGenerator;
-use Strayobject\Mizzenlite\Page\PageRepository;
-use Strayobject\Mizzenlite\MetaParser\MetaParser;
+use Mizzencms\Core\Container;
+use Mizzencms\Core\Request;
+use Mizzencms\Core\View\View;
+use Mizzencms\Core\EventManager;
+use Mizzencms\Core\Navigation\Navigation;
+use Mizzencms\Core\Helpers\ArrayHelper;
+use Mizzencms\Core\Page\PageRepositoryGenerator;
+use Mizzencms\Core\Page\PageRepository;
+use Mizzencms\Core\MetaParser\MetaParser;
 use Symfony\Component\Finder\Finder;
 use League\Url\Url;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Strayobject\Mizzenlite\view;
+namespace Mizzencms\Core\view;
 
-use Strayobject\Mizzenlite\Base;
+use Mizzencms\Core\Base;
 
 class View extends Base
 {

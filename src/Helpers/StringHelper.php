@@ -1,6 +1,6 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Helpers;
+namespace Mizzencms\Core\Helpers;
 
 class StringHelper
 {

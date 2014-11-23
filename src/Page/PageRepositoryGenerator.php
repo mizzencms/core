@@ -1,10 +1,10 @@
 <?php
 
-namespace Strayobject\Mizzenlite\Page;
+namespace Mizzencms\Core\Page;
 
-use Strayobject\Mizzenlite\Base;
-use Strayobject\Mizzenlite\Page\PageRepository;
-use Strayobject\Mizzenlite\Page\Page;
+use Mizzencms\Core\Base;
+use Mizzencms\Core\Page\PageRepository;
+use Mizzencms\Core\Page\Page;
 use Symfony\Component\Finder\Finder;
 use CommonApi\Exception\InvalidArgumentException;
 
