@@ -1,24 +1,24 @@
-#MizzenLite
+#MizzenCMS Lite
 
-MizzenLite provides a quick way to create simple websites utilising existing 
+MizzenCMS Lite provides a quick way to create simple websites utilising existing 
 composer packages.
 
 ###Installation
 ----
-> Please note that this is not even beta. It should not be used in production!
-> In fact at the moment it should hardly be used at all due to expected
-> namespace change.
+> Please note that this is not even beta. Use at your own risk.
 
-MizzenLite can be found on 
-[Packagist](https://packagist.org/packages/strayobject/mizzenlite) and
+MizzenCMS Lite can be found on 
+[Packagist](https://packagist.org/packages/mizzencms/core) and
 [composer](http://getcomposer.org) is the recommended way to install.
+
+For more info check out [the website](http://mizzencms.net)
 
 Add the following to your `composer.json`:
 
 ```json
 {
     "require": {
-        "strayobject/mizzenlite": "~0.1"
+        "mizzencms/core": "~0.4"
     }
 }
 ```
@@ -30,25 +30,9 @@ $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar install
 ```
 
-###Features
+###Features, Support & Extensions
 ----
-Coming soon.
-
-###Support
-----
-Coming soon.
-
-###Examples
-----
-Coming soon.
-
-###Usage
-----
-Coming soon.
-
-###Extensions
-----
-Coming soon.
+More info at [mizzencms.net](http://mizzencms.net)
 
 ###Tests
 ----
