@@ -29,7 +29,7 @@ class PageRepository extends Base
         if (isset($this->pages[$path])) {
             return $this->pages[$path];
         } else {
-            header('Page not found.', true, 404);
+            header('HTTP/1.0 404 Not Found', true, 404);
             return $this->pages['404'];
         }
     }
