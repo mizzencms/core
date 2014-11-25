@@ -40,21 +40,32 @@ class App extends Base
                 $config = ArrayHelper::configArrayToObject(
                     json_decode(file_get_contents($configPath), true)
                 );
+
+                if (!isset($config->baseDir)) {
+                    $config->baseDir = '';
+                }
             } else {
                 $config      = new \StdClass;
                 $config->url = isset($_SERVER['SERVER_NAME']) ?
                     'http://'.$_SERVER['SERVER_NAME'].'/' : 'http://mizzencms.net/';
                 $config->siteName = 'MizzenLite';
+                $config->baseDir = '';
             }
 
             return $config;
         });
-        $bag->add('url', function () {
+        $bag->add('url', function () use ($bag) {
             $url = Url::createFromServer($_SERVER);
             /**
-             * Remove inedex.php if exists
+             * Remove index.php if exists
              */
             $url->getPath()->remove('index.php');
+            /**
+             * remove base dir (for when we are installed in a dir)
+             */
+            if (!empty($bag->get('config')->baseDir)) {
+                $url->getPath()->remove($bag->get('config')->baseDir);
+            }
             /**
              * home needs to be converted to index
              */
