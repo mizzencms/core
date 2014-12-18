@@ -20,6 +20,15 @@ abstract class Base
                 array('class' => $this)
             );
         }
+        /**
+         * BC break, withheld
+         */
+        // $this->init();
+    }
+
+    public function init()
+    {
+        // placeholder for any __constructor() type functionality
     }
 
     public function triggerEvent($eventName, $eventParams)
