@@ -24,8 +24,13 @@ abstract class Base
 
     public function triggerEvent($eventName, $eventParams)
     {
-        if ($bag = $this->getBag()) {
+        if ($bag = $this->getBag() && $bag->has('eventManger')) {
             $bag->getShared('eventManager')->notify($eventName, $eventParams);
+        } else {
+            throw new \UnexpectedValueException(
+                'Bag (Container) is empty or does not contain 
+                "eventManager" service.'
+            );
         }
     }
 

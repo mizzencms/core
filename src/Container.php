@@ -31,7 +31,9 @@ class Container
     public function remove($key)
     {
         if (!$this->has($key)) {
-            throw new \Exception('Item '.$key.' has not been found in a bag.');
+            throw new \UnexpectedValueException(
+                'Item '.$key.' has not been found in a bag.'
+            );
         }
 
         $items = $this->getItems();
@@ -43,7 +45,9 @@ class Container
     public function removeShared($key)
     {
         if (!$this->has($key)) {
-            throw new \Exception('Item '.$key.' has not been found in a bag.');
+            throw new \UnexpectedValueException(
+                'Item '.$key.' has not been found in a bag.'
+            );
         }
 
         $items = $this->getItemsShared();
@@ -55,7 +59,9 @@ class Container
     public function get($key)
     {
         if (!$this->has($key)) {
-            throw new \Exception('Item '.$key.' has not been found in a bag.');
+            throw new \UnexpectedValueException(
+                'Item '.$key.' has not been found in a bag.'
+            );
         }
 
         $items = $this->getItems();
@@ -69,10 +75,14 @@ class Container
             // nothing special at the moment
         }
         elseif ($this->has($key)) {
-            $this->setItemsShared(array($key => $this->get($key)) + $this->getItemsShared());
+            $this->setItemsShared(
+                array($key => $this->get($key)) + $this->getItemsShared()
+            );
         }
         else {
-            throw new \Exception('Item '.$key.' has not been found in a bag.');
+            throw new \UnexpectedValueException(
+                'Item '.$key.' has not been found in a bag.'
+            );
         }
 
         return $this->getItemsShared()[$key];
