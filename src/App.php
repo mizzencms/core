@@ -127,9 +127,19 @@ class App extends Base
      */
     public function registerObservers()
     {
-        $em         = $this->getBag()->getShared('eventManager');
-        $pathModule = $this->getBag()->get('basePath')->path.'/module/';
+        $em             = $this->getBag()->getShared('eventManager');
+        $pathModule     = $this->getBag()->get('basePath')->path.'/module/';
+        $disabledModule = [];
 
+        if (isset($this->getBag()->get('config')->module) 
+            && isset($this->getBag()->get('config')->module->disabled)) {
+
+            $disabledModules = (array) $this->getBag()
+                ->get('config')
+                ->module
+                ->disabled
+            ;
+        }
         if (is_dir($pathModule)) {
             $dir = opendir($pathModule);
 
@@ -139,7 +149,8 @@ class App extends Base
                     $vendorDir  = opendir($pathVendor);
 
                     while ($module = readdir($vendorDir)) {
-                        if (!in_array($module, array('.', '..'))) {
+                        if (!in_array($module, array('.', '..'))
+                            && !in_array($vendor.'/'.$module, $disabledModules)) {
                             $pathObserver = $pathVendor.$module.'/Module.php';
 
                             if (file_exists($pathObserver)) {
