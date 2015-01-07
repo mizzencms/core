@@ -13,7 +13,7 @@ abstract class Base
         $this->setBag(Container::getInstance());
 
         if ($this->getBag()->has('eventManager')
-            && get_class($this) != 'Mizzencms\Core\EventManager')
+            && static::class != 'Mizzencms\Core\EventManager')
         {
             $this->triggerEvent(
                 'construct'.ucfirst(StringHelper::toCamelCase(get_class($this), '\\')),
@@ -26,14 +26,14 @@ abstract class Base
         // $this->init();
     }
 
-    public function init()
-    {
+    //public function init()
+    //{
         // placeholder for any __constructor() type functionality
-    }
+    //}
 
     public function triggerEvent($eventName, $eventParams)
     {
-        if ($bag = $this->getBag() && $bag->has('eventManger')) {
+        if (($bag = $this->getBag()) && $bag->has('eventManager')) {
             $bag->getShared('eventManager')->notify($eventName, $eventParams);
         } else {
             throw new \UnexpectedValueException(
