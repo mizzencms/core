@@ -23,7 +23,8 @@ class App extends Base
     public function init(\Directory $basePath)
     {
         /**
-         * @todo  create a default bag and only override if something special needed
+         * @todo  create a default bag and only override if something 
+         * special needed
          */
         $bag = Container::getInstance();
 
@@ -47,7 +48,8 @@ class App extends Base
             } else {
                 $config      = new \StdClass;
                 $config->url = isset($_SERVER['SERVER_NAME']) ?
-                    'http://'.$_SERVER['SERVER_NAME'].'/' : 'http://mizzencms.net/';
+                    'http://'.$_SERVER['SERVER_NAME'].'/' : 
+                    'http://mizzencms.net/';
                 $config->siteName = 'MizzenLite';
                 $config->baseDir = '';
             }
@@ -79,7 +81,10 @@ class App extends Base
             return new MetaParser();
         });
         $bag->add('pageRepository', function () {
-            $prp = new PageRepositoryGenerator(new PageRepository(), new Finder());
+            $prp = new PageRepositoryGenerator(
+                new PageRepository(),
+                new Finder()
+            );
             $prp->populateRepository();
 
             return $prp->getPageRepository();
@@ -98,7 +103,8 @@ class App extends Base
     public function run()
     {
         /**
-         * register all observers before we start so that modules can add their own functionality etc.
+         * register all observers before we start so that modules can add their 
+         * own functionality etc.
          */
         $this->registerObservers();
         $this->triggerEvent('appRun', array('app' => $this));
