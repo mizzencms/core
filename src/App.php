@@ -127,9 +127,9 @@ class App extends Base
      */
     public function registerObservers()
     {
-        $em             = $this->getBag()->getShared('eventManager');
-        $pathModule     = $this->getBag()->get('basePath')->path.'/module/';
-        $disabledModule = [];
+        $em              = $this->getBag()->getShared('eventManager');
+        $pathModule      = $this->getBag()->get('basePath')->path.'/module/';
+        $disabledModules = [];
 
         if (isset($this->getBag()->get('config')->module) 
             && isset($this->getBag()->get('config')->module->disabled)) {
